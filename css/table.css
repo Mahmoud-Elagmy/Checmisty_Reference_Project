@@ -1,0 +1,338 @@
+/* Start of Global Rules */
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-black: #0b0c10;
+    --main-color: #191970;
+    --main-hover: #6F8FAF;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --main-padd: 80px;
+}
+
+body {
+    font-family: "Commissioner", sans-serif;
+    background-color: var(--main-black);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1400px) {
+    .container {
+        width: 1325px;
+        /* Spreads the logo and nav further apart */
+    }
+}
+
+/* End of Global Rules */
+
+/* Start of components */
+
+.main-head h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+    position: relative;
+}
+
+.main-head p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* End of components */
+
+.pertable {
+    padding-top: var(--main-padd);
+    padding-bottom: var(--main-padd);
+    position: relative;
+}
+
+.pertable .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pertable .container .content {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(0, 1fr));
+    grid-template-rows: repeat(10, auto);
+    gap: 8px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.pertable .container .content .element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.pertable .container .content .element.noble-gas {
+    background-color: #a855f7;
+}
+
+.pertable .container .content .element.nonmetal {
+    background-color: #3b82f6;
+}
+
+.pertable .container .content .element.alkaline-earth {
+    background-color: #f97316;
+}
+
+.pertable .container .content .element.alkali {
+    background-color: #ef4444;
+}
+
+.pertable .container .content .element.metalloid {
+    background-color: #10b981;
+}
+
+.pertable .container .content .element.halogen {
+    background-color: #06b6d4;
+}
+
+.pertable .container .content .element.lanthanide {
+    background-color: #ec4899;
+}
+
+.pertable .container .content .element.actinide {
+    background-color: #d946ef;
+}
+
+.pertable .container .content .element.transition {
+    background-color: #f59e0b;
+}
+
+.pertable .container .content .element.post-transition {
+    background-color: #fbbf24;
+}
+
+
+.pertable .container .content .element.selected {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px var(--main-hover);
+    background-color: var(--main-black);
+}
+
+.element .symbol {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.element .number {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.element .name {
+    display: none;
+    font-size: clamp(9px, 0.7vw, 10px);
+    text-align: center;
+}
+
+.element:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px var(--main-hover);
+}
+
+.element:hover .symbol,
+.element:hover .number {
+    display: none;
+}
+
+.element:hover .name {
+    display: block;
+}
+
+.pertable .container .card.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 40px;
+    color: var(--text-primary);
+}
+
+.card.active .left {
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: var(--text-primary);
+    box-shadow: 0px 0px 20px var(--main-hover);
+    animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.card.active .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    font-size: 20px;
+    background-color: var(--glass-bg);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.card.active .right h4 {
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.card.active .right span {
+    position: relative;
+}
+
+
+@media (max-width:1199px) {
+    .pertable .container .content {
+        gap: 2px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .pertable .container .content {
+        gap: 2px;
+    }
+
+    .pertable .container .card.active {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pertable .container .card.active .right {
+        font-size: 16px;
+        padding: 20px;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pertable .container .content {
+        gap: 2px;
+        padding: 5px;
+    }
+
+    .pertable .container .element .number {
+        display: none;
+    }
+
+    .pertable .container .card.active .right {
+        font-size: 16px;
+        padding: 20px;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
