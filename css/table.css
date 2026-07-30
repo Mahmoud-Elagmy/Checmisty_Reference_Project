@@ -234,7 +234,7 @@ a {
 }
 
 .card.active .left {
-    background-color: var(--main-color);
+    background-color: var(--glass-bg);
     padding: 20px;
     border-radius: 10px;
     width: 200px;
@@ -275,6 +275,10 @@ a {
     border-radius: 10px;
 }
 
+.card .right h4 {
+    display: none;
+}
+
 .card.active .right h4 {
     color: var(--text-secondary);
     font-size: 20px;
@@ -282,11 +286,38 @@ a {
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    display: block;
 }
 
 .card.active .right span {
     position: relative;
 }
+
+.card.active .right .use {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.card.active .right .use li {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    color: var(--text-secondary);
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.card.active .right .use li::marker {
+    color: var(--text-secondary);
+}
+
+.card.active .right .use li:hover {
+    color: var(--text-primary);
+}
+
 
 
 @media (max-width:1199px) {
@@ -315,6 +346,10 @@ a {
         gap: 15px;
         width: 100%;
         max-width: 100%;
+    }
+
+    .pertable .container .card.active .right .use li {
+        font-size: 16px;
     }
 }
 

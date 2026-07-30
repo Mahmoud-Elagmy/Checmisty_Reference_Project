@@ -24,7 +24,7 @@ html {
 
 body {
     font-family: "Commissioner", sans-serif;
-    background-color: var(--main-black);
+    background: linear-gradient(to right, #2C3E50, #000000);
     overflow-x: hidden;
 }
 
@@ -497,7 +497,7 @@ header nav ul li a:hover::before {
 
 @media (max-width: 767px) {
     .table .container form input[type="submit"] {
-        width: 120px;
+        width: 140px;
         height: 40px;
         font-size: 16px;
     }
@@ -722,6 +722,29 @@ header nav ul li a:hover::before {
     display: inline-block;
 }
 
+.contact .container .content .text .contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.contact .container .content .text .contact-icons a {
+    color: var(--text-primary);
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    animation: move 2s ease-in-out infinite;
+}
+
+.contact .container .content .text .contact-icons a:hover {
+    color: var(--main-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--main-hover);
+    animation: none;
+}
+
+
 .contact .container .content form {
     display: flex;
     flex-direction: column;
@@ -839,3 +862,18 @@ header nav ul li a:hover::before {
 }
 
 /* End of Contact */
+
+/* Start of footer */
+
+footer {
+    background-color: var(--main-color);
+    background-image: url(../assets/Quote.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 10px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+/* End of footer */

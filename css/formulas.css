@@ -1,0 +1,391 @@
+/* Start of Global Rules */
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-black: #0b0c10;
+    --main-color: #191970;
+    --main-hover: #6F8FAF;
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --main-padd: 80px;
+}
+
+body {
+    font-family: "Commissioner", sans-serif;
+    background-color: var(--main-black);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1400px) {
+    .container {
+        width: 1325px;
+        /* Spreads the logo and nav further apart */
+    }
+}
+
+/* End of Global Rules */
+
+/* Start of components */
+
+.main-head h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5;
+    position: relative;
+}
+
+.main-head p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-secondary);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* End of components */
+
+.formulas {
+    padding-top: var(--main-padd);
+    padding-bottom: var(--main-padd);
+    position: relative;
+}
+
+.formulas .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.formulas .container .cards {
+    padding-top: var(--main-padd);
+    padding-bottom: var(--main-padd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.formulas .container .cards .card {
+    background-color: var(--glass-bg);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    box-shadow: 0px 0px 20px var(--main-hover);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    animation: move 3s ease-in-out infinite;
+}
+
+
+
+.formulas .container .cards .card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.formulas .container .cards .card i {
+    font-size: 18px;
+}
+
+.formulas .container .cards .card:nth-child(1) {
+    color: #3b82f6;
+}
+
+.formulas .container .cards .card:nth-of-type(2) {
+    color: #ef4444;
+}
+
+.formulas .container .cards .card:nth-of-type(3) {
+    color: #f97316;
+}
+
+.formulas .container .cards .card:nth-of-type(4) {
+    color: #10b981;
+}
+
+.formulas .container .cards .card:nth-of-type(5) {
+    color: #06b6d4;
+}
+
+.formulas .container .cards .card:nth-of-type(6) {
+    color: #ec4899;
+}
+
+.formulas .container .cards .card:nth-of-type(7) {
+    color: #d946ef;
+}
+
+.formulas .container .cards .card:nth-of-type(8) {
+    color: #f59e0b;
+}
+
+.formulas .container .cards .card:nth-of-type(9) {
+    color: #fbbf24;
+}
+
+.formulas .container .cards .card:nth-of-type(10) {
+    color: #a855f7;
+}
+
+
+.formulas .container .cards .card:hover,
+.formulas .container .cards .card.hovered {
+    animation: none;
+    color: var(--text-primary);
+}
+
+.formulas .container .cards .card:nth-of-type(1):hover,
+.formulas .container .cards .card.hovered:nth-of-type(1) {
+    background-color: #06b6d4;
+}
+
+.formulas .container .cards .card:nth-of-type(2):hover,
+.formulas .container .cards .card.hovered:nth-of-type(2) {
+    background-color: #ef4444;
+}
+
+.formulas .container .cards .card:nth-of-type(3):hover,
+.formulas .container .cards .card.hovered:nth-of-type(3) {
+    background-color: #f97316;
+}
+
+.formulas .container .cards .card:nth-of-type(4):hover,
+.formulas .container .cards .card.hovered:nth-of-type(4) {
+    background-color: #10b981;
+}
+
+.formulas .container .cards .card:nth-of-type(5):hover,
+.formulas .container .cards .card.hovered:nth-of-type(5) {
+    background-color: #06b6d4;
+}
+
+.formulas .container .cards .card:nth-of-type(6):hover,
+.formulas .container .cards .card.hovered:nth-of-type(6) {
+    background-color: #ec4899;
+}
+
+.formulas .container .cards .card:nth-of-type(7):hover,
+.formulas .container .cards .card.hovered:nth-of-type(7) {
+    background-color: #d946ef;
+}
+
+.formulas .container .cards .card:nth-of-type(8):hover,
+.formulas .container .cards .card.hovered:nth-of-type(8) {
+    background-color: #f59e0b;
+}
+
+.formulas .container .cards .card:nth-of-type(9):hover,
+.formulas .container .cards .card.hovered:nth-of-type(9) {
+    background-color: #fbbf24;
+}
+
+.formulas .container .cards .card:nth-of-type(10):hover,
+.formulas .container .cards .card.hovered:nth-of-type(10) {
+    background-color: #a855f7;
+}
+
+.formulas .container .elements-table {
+    display: none;
+}
+
+.elements-type {
+    padding-top: var(--main-padd);
+    padding-bottom: var(--main-padd);
+    position: relative;
+}
+
+.elements-type table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.elements-table table tr td {
+    padding: 20px;
+    text-align: center;
+}
+
+.elements-table table thead tr th {
+    background-color: var(--main-black);
+    color: var(--text-primary);
+    padding: 20px;
+    text-align: center;
+}
+
+.elements-table table tbody {
+    background-color: var(--main-black);
+    color: var(--text-primary);
+    padding: 20px;
+    text-align: center;
+}
+
+.elements-table table tbody tr:not(:last-child) {
+    border-bottom: 2px solid var(--text-secondary);
+}
+
+.formula-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formula-items .item {
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.formula-items .item:hover {
+    border: 2px solid var(--glass-border);
+    border-radius: 10px;
+    background-color: var(--text-primary);
+    color: var(--main-color);
+}
+
+.calc {
+    display: none;
+    padding-top: var(--main-padd);
+    padding-bottom: var(--main-padd);
+    position: relative;
+}
+
+.calc .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.calc .container .content {
+    font-size: 30px;
+    background-color: var(--main-black);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calc .container .mass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.calc .container .mass span {
+    font-size: 16px;
+    background-color: var(--main-black);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.calc .container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.calc .container form input {
+    padding: 10px 0;
+    border: 2px solid var(--main-black);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.calc .container p {
+    display: none;
+    font-size: 16px;
+    background-color: var(--main-black);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .formulas .container .cards .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .calc .container form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calc .container form input {
+        width: 100%;
+    }
+}
