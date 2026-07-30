@@ -759,6 +759,7 @@ header nav ul li a:hover::before {
     border-radius: 5px;
     border: 1px solid var(--main-color);
     background-color: var(--main-black);
+color: var(--text-primary) ;
     padding-left: 10px;
     color: var(--text-primary);
     font-size: 20px;
@@ -778,6 +779,7 @@ header nav ul li a:hover::before {
     border: 1px solid var(--main-color);
     padding-left: 10px;
     padding-top: 10px;
+    background-color: var(--main-black);
     color: var(--text-primary);
     font-size: 20px;
     font-weight: 600;
