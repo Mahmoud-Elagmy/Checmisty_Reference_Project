@@ -360,6 +360,7 @@ a {
 
 .calc .container form input {
     background-color: var(--main-black);
+color:var(--text-primary);
     padding: 10px 0;
     border: 2px solid var(--main-black);
     border-radius: 5px;
