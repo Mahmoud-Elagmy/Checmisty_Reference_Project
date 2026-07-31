@@ -772,7 +772,7 @@ header nav ul li a:hover::before {
     outline: none;
 }
 
-.contact .container .content form input[type="email"]:invalid::placeholder {
+.contact .container .content form input[type="email"]:invalid+.placeholder {
     display: none;
 }
 
