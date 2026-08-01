@@ -8,10 +8,10 @@
     <title>Chemistry Hub | Periodic Table & Stoichiometry Calculator</title>
     <meta name="description"
         content="Interactive periodic table and live stoichiometry calculator. Balance chemical equations and find molar masses instantly.">
-    <!--main css file-->
-    <link rel="stylesheet" href="css/master.css">
     <!--render all elements normally-->
     <link rel="stylesheet" href="css/normalize.css">
+    <!--main css file-->
+    <link rel="stylesheet" href="css/master.css">
     <!--font awesome-->
     <link rel="stylesheet" href="css/all.min.css">
     <!--google fonts-->
@@ -21,13 +21,13 @@
     <!-- Lenis Stylesheet & Script -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
     <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+    <script>
+        // Enable auto-rendering smooth scroll
+        const lenis = new Lenis({
+            autoRaf: true,
+        });
+    </script>
 </head>
-<script>
-    // Enable auto-rendering smooth scroll
-    const lenis = new Lenis({
-        autoRaf: true,
-    });
-</script>
 
 <body>
     <!--start header-->
