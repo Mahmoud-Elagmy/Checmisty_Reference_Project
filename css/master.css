@@ -772,8 +772,10 @@ header nav ul li a:hover::before {
     outline: none;
 }
 
-.contact .container .content form input[type="email"]:invalid+.placeholder {
-    display: none;
+.contact .container .content form input[type="email"]:valid+.placeholder,
+.contact .container .content form input[type="email"]:focus+.placeholder,
+.contact .container .content form input[type="email"]:not(:placeholder-shown)+.placeholder {
+    animation: placeholder 0.3s ease-in-out forwards;
 }
 
 .contact .container .content form textarea {
@@ -823,17 +825,18 @@ header nav ul li a:hover::before {
     transition: 0.3s ease-in-out;
 }
 
-.contact .container .content form input[type="email"]:focus+.placeholder,
-.contact .container .content form input[type="email"]:invalid+.placeholder {
-    top: -15px;
-    left: 10px;
-    font-size: 12px;
-    opacity: 1;
-    border: 2px solid var(--main-color);
-    padding: 5px;
-    border-radius: 5px;
-    background-color: var(--main-color);
-    color: var(--text-primary);
+@keyframes placeholder {
+    to {
+        top: -15px;
+        left: 10px;
+        font-size: 12px;
+        opacity: 1;
+        border: 2px solid var(--main-color);
+        padding: 5px;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        color: var(--text-primary);
+    }
 }
 
 @media (max-width:767px) {
